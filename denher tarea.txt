@@ -1,0 +1,6 @@
+1) dos numeros se llaman amigos cuado la suma de los divisores de uno te da el otro numero
+2) determinar si un numero es super abundante, perfecto, o defectuoso 
+a)cuando al suma de sus divisores es mas grande que el mismo
+b)perfecto cuando la suma de sus divisores es = a el
+c)defectuoso cuando la suma de sus divisores es menor que el
+todos los nums primos son defectuosos
