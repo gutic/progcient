@@ -1,1 +1,2 @@
-/*el array es un puntero. 
+/*el array es un puntero.
+*/
