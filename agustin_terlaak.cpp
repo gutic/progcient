@@ -1,5 +1,5 @@
-//hecho en linux
-
+//funcional en linux
+//examen de estructuras
 #include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
