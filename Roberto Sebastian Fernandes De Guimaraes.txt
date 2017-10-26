@@ -1,0 +1,63 @@
+#include "stdafx.h"
+#include <string.h>
+#include <iostream>
+#include <stdio.h>
+#include <math.h>
+
+using namespace std;
+void CalcularPolares(float *puntero1, float *puntero2);
+void CalcularCartesianas(float *puntero1, float *puntero2);
+void main()
+{
+	char opc;
+	float *puntero1, *puntero2;
+	do
+	{
+		cout << "Ingrese que coordenadas desea calcular \nP para polares \nC para cartesianas \nS para salir.\n";
+		cin >> opc;
+		//polares calcular las cartecianas y cartecianas calculan los polares.
+		
+		switch (opc)
+		{
+		case 'p':
+			cout << "ingrese los dos valores para calcular: \n";
+			puntero1 = new float;
+			puntero2 = new float;
+			cin >> *puntero1;
+			cin >> *puntero2;
+			CalcularCartesianas(puntero1, puntero2);
+			delete puntero1;
+			delete puntero2;
+			break;
+		case 'c':
+			cout << "ingrese los dos valores para calcular: \n";
+			puntero1 = new float;
+			puntero2 = new float;
+			cin >> *puntero1;
+			cin >> *puntero2;
+			CalcularPolares(puntero1, puntero2);
+			delete puntero1;
+			delete puntero2;
+			break;
+		}
+	} while (opc != 's');
+	
+	cout << "el problema pedia que te calcule a la inversa.. cartesianas en ves de polares \ny polares en ves de cartesianas ";
+	system("pause");
+}
+
+void CalcularPolares(float *puntero1, float *puntero2) {
+	//x = puntero1 y = puntero2
+	float r, p;
+	r = sqrt(pow(*puntero1, 2) + pow(*puntero2,2));
+	p = atan(*puntero2 / *puntero1);
+	cout <<"Apa.! calculaste Las polares! y tu resultado es: \n" << "r = " << r << "p = " << p << endl;
+}
+
+void CalcularCartesianas(float *puntero1, float *puntero2) {
+	//r = puntero1 p = puntero2
+	float x, y;
+	x = *puntero1 * cos(*puntero2);
+	y = *puntero1 * sin(*puntero2);
+	cout << "Apa.! calculaste Las cartesianas! y tu resultado es: \n" << "x = " << x << "y = " << y << endl;
+}
